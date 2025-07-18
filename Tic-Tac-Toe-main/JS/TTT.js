@@ -130,12 +130,15 @@ const resetGame = () => {
   }
 };
 
-const swapBtn = document.getElementById("swapScores");
-swapBtn.addEventListener("click", () => {
-  [scoreX, scoreO] = [scoreO, scoreX];
-  document.getElementById("scoreX").textContent = scoreX;
-  document.getElementById("scoreO").textContent = scoreO;
-});
+// Remove or comment out these lines if swap button is not present
+// const swapBtn = document.getElementById("swapScores");
+// if (swapBtn) {
+//   swapBtn.addEventListener("click", () => {
+//     [scoreX, scoreO] = [scoreO, scoreX];
+//     document.getElementById("scoreX").textContent = scoreX;
+//     document.getElementById("scoreO").textContent = scoreO;
+//   });
+// }
 
 newGameButton.addEventListener("click", resetBoard);
 reset.addEventListener("click", resetGame);
